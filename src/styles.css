@@ -1,0 +1,255 @@
+/* Global styles with CSS Variables for Dark/Light Mode */
+
+:root,
+:root[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #11111a;
+  --bg-card: #181825;
+  --bg-card-hover: #1e1e2e;
+  
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  
+  /* Text */
+  --text-primary: #f0f0f8;
+  --text-secondary: #9999bb;
+  --text-muted: #55556a;
+  
+  /* Accents */
+  --accent: #4f8cff;
+  --accent2: #a78bfa;
+  --accent3: #34d399;
+  --accent4: #fb923c;
+  
+  /* Components */
+  --navbar-bg: rgba(10, 10, 15, 0.85);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --iframe-overlay: rgba(0, 0, 0, 0.55);
+  
+  /* Button styles */
+  --btn-bg: var(--accent);
+  --btn-text: #ffffff;
+  --btn-hover: var(--accent2);
+  
+  /* Card specific */
+  --card-bg: var(--bg-card);
+  --card-border: var(--border);
+}
+
+:root[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #f8f8ff;
+  --bg-secondary: #f0f0fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5f5ff;
+  
+  /* Borders */
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.18);
+  
+  /* Text */
+  --text-primary: #0f0f1a;
+  --text-secondary: #444466;
+  --text-muted: #9999bb;
+  
+  /* Accents */
+  --accent: #2563eb;
+  --accent2: #7c3aed;
+  --accent3: #059669;
+  --accent4: #ea580c;
+  
+  /* Components */
+  --navbar-bg: rgba(248, 248, 255, 0.85);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --iframe-overlay: rgba(255, 255, 255, 0.55);
+  
+  /* Button styles */
+  --btn-bg: var(--accent);
+  --btn-text: #ffffff;
+  --btn-hover: #1d4ed8;
+  
+  /* Card specific */
+  --card-bg: var(--bg-card);
+  --card-border: var(--border);
+}
+
+/* Global transitions */
+* {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+
+/* Exclude animations, transforms, and iframes from transitions */
+*,
+:not(.animate):not(.fade-enter):not(.scale-in),
+iframe,
+canvas,
+.preview-iframe {
+  transition: none !important;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+a:hover {
+  color: var(--accent2);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Paragraphs */
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Card component base */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 300ms ease;
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow);
+}
+
+/* Button component base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transition: all 300ms ease;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Badge styles */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgba(79, 140, 255, 0.15);
+  color: var(--accent);
+}
+
+:root[data-theme="light"] .badge {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent);
+}
+
+/* Input styles */
+input, textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 300ms ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.15);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted);
+}
