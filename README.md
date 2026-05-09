@@ -90,7 +90,7 @@ src/
 
 Si estás interesado en mi perfil o tienes alguna duda sobre este proyecto:
 
-- **LinkedIn**: [Enlace a tu perfil]
+- **LinkedIn**: www.linkedin.com/in/jose-antonio-rivera-urbina-85221a8a
 - **Email**: joseantonioriveraurbi16@gmail.com (Protegido en la web)
 - **GitHub**: [@joseRiver39](https://github.com/joseRiver39)
 
