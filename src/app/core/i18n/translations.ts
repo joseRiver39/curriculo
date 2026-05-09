@@ -85,6 +85,7 @@ export const TRANSLATIONS = {
     contact_whatsapp: 'Escribir por WhatsApp',
     contact_location: 'Colombia · Remoto',
     contact_open_to: 'Abierto a oportunidades remotas globales',
+    contact_linkedin: 'LinkedIn Profesional',
 
     /* FOOTER */
     footer_made: 'Diseñado y desarrollado por',
@@ -177,6 +178,7 @@ export const TRANSLATIONS = {
     contact_whatsapp: 'Chat on WhatsApp',
     contact_location: 'Colombia · Remote',
     contact_open_to: 'Open to global remote opportunities',
+    contact_linkedin: 'Professional LinkedIn',
 
     /* FOOTER */
     footer_made: 'Designed and developed by',

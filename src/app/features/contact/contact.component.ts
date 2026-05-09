@@ -4,7 +4,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { HttpClient } from '@angular/common/http';
 import { I18nService } from '../../core/services/i18n.service';
 import { ProtectedInfoComponent } from '../../shared/components/protected-info.component';
-import { LucideAngularModule, Mail, Phone, MapPin, Send, MessageSquare, CheckCircle } from 'lucide-angular';
+import { LucideAngularModule, Mail, Phone, MapPin, Send, MessageSquare, CheckCircle, Linkedin } from 'lucide-angular';
 
 @Component({
   selector: 'app-contact',
@@ -33,6 +33,15 @@ import { LucideAngularModule, Mail, Phone, MapPin, Send, MessageSquare, CheckCir
               <lucide-icon [name]="Phone" class="w-5 h-5"></lucide-icon>
             </div>
             <app-protected-info [parts]="['+57', '313', '394', '5995']" type="phone"></app-protected-info>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <lucide-icon [name]="Linkedin" class="w-5 h-5"></lucide-icon>
+            </div>
+            <a href="https://www.linkedin.com/in/jose-antonio-rivera-urbina-85221a8a" target="_blank" class="hover:text-accent transition-colors">
+              {{ i18n.t('contact_linkedin') }}
+            </a>
           </div>
 
           <div class="contact-item">
@@ -91,6 +100,7 @@ export class ContactComponent implements AfterViewInit {
   readonly Mail = Mail;
   readonly Phone = Phone;
   readonly MapPin = MapPin;
+  readonly Linkedin = Linkedin;
   readonly Send = Send;
   readonly MessageSquare = MessageSquare;
   readonly CheckCircle = CheckCircle;

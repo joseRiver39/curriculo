@@ -10,7 +10,7 @@ import { LucideAngularModule, Moon, Sun, Languages } from 'lucide-angular';
   imports: [CommonModule, LucideAngularModule],
   template: `
     <nav class="navbar">
-      <a href="#" class="navbar-logo">JOSE RIVERA</a>
+      <a href="#" class="navbar-logo">JOSÉ RIVERA</a>
       
       <ul class="navbar-links">
         <li><a href="#sobre-mi">{{ i18n.t('nav_about') }}</a></li>
