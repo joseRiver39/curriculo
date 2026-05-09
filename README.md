@@ -1,202 +1,104 @@
-![Angular Portfolio](https://img.shields.io/badge/Angular-19-DD0031?style=for-the-badge&logo=angular)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwind-css)
-![Status](https://img.shields.io/badge/status-active-green.svg)
+# 🚀 Modern Portfolio | Angular 19 + Tailwind CSS v4
 
-# 🌐 Angular Portfolio
+[![Angular](https://img.shields.io/badge/Angular-19.0+-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> Portfolio web profesional desarrollado en Angular 19 con modo oscuro/claro, internacionalización ES/EN y protecciones anti-scraping.
-
-[English](#english) | [Español](#español)
+Este es un portafolio de alto rendimiento diseñado con una estética **SaaS Premium**, enfocado en la velocidad, la seguridad y la experiencia de usuario. Implementa las últimas características de Angular 19, incluyendo Signals para una gestión de estado reactiva y eficiente.
 
 ---
 
-## 🇪🇸 Español
+## 🌟 Características Principales
 
-### Características
+### 🛠️ Tecnología de Vanguardia
+- **Angular 19**: Uso de **Signals** para reactividad pura, eliminando la necesidad de Zone.js en el futuro.
+- **Tailwind CSS v4**: Motor de estilos de última generación con configuración optimizada y variables CSS nativas.
+- **Lucide Icons**: Iconografía vectorial ligera y moderna.
 
-- **🎨 Modo Oscuro/Claro**: Transición fluida con CSS variables y persistencia en localStorage
-- **🌍 Internacionalización ES/EN**: Traducciones completas para todos los textos
-- **📧 Email Protegido**: Rendering en Canvas + honeypot anti-scraping
-- **🖥️ Mini Navegadores**: Iframes embebidos para mostrar proyectos reales
-- **♿ Accesibilidad**: Soporte completo para lectores de pantalla y navegación por teclado
+### 🌍 Internacionalización (I18n)
+- Sistema dinámico ES/EN integrado mediante señales.
+- Detección automática del idioma del navegador.
+- Persistencia de preferencia en `localStorage`.
 
-### Estructura del Proyecto
+### 🛡️ Seguridad y Privacidad
+- **Anti-Scraping**: Email y teléfono protegidos mediante renderizado dinámico en **Canvas API**. Los datos no existen como texto en el DOM, evitando que bots y arañas recolecten tu información.
+- **Honeypot Logic**: Técnicas avanzadas para prevenir spam en el formulario de contacto.
 
-```
+### 🎨 UX/UI Premium
+- **Modo Oscuro/Claro**: Sistema de temas con persistencia y transiciones fluidas.
+- **Typewriter Effect**: Efecto de escritura dinámico y pausado que se adapta al idioma seleccionado.
+- **Responsive Design**: Optimización total para dispositivos móviles, tablets y escritorio.
+
+---
+
+## 📂 Estructura del Proyecto
+
+```bash
 src/
 ├── app/
 │   ├── core/
-│   │   ├── i18n/           # Traducciones ES/EN
-│   │   ├── pipes/           # Pipes personalizados
-│   │   └── services/       # ThemeService, I18nService
-│   ├── features/
-│   │   └── projects/       # ProjectBrowserComponent
-│   └── shared/
-│       └── email-protected/  # EmailProtectedComponent
-└── styles.css              # CSS Variables globales
-```
-
-### Componentes
-
-| Componente | Descripción |
-|------------|-------------|
-| `EmailProtectedComponent` | Email protegido con rendering en Canvas, honeypot y construcción runtime de mailto |
-| `ProjectBrowserComponent` | Mini navegador con iframes embebidos y Chrome bar simulada |
-| `ThemeService` | Gestión de tema dark/light con Signals |
-| `I18nService` | Internacionalización ES/EN con traducciones completas |
-| `SafeUrlPipe` | Pipe para sanitizar URLs de iframes |
-
-### Instalación
-
-```bash
-# Clonar repositorio
-git clone https://github.com/tu-usuario/portfolio-angular.git
-cd portfolio-angular
-
-# Instalar dependencias
-npm install
-
-# Iniciar servidor de desarrollo
-ng serve
-
-# Construir para producción
-ng build
-```
-
-### Uso de Servicios
-
-```typescript
-// Inyectar en tu componente
-constructor(
-  private themeService: ThemeService,
-  private i18n: I18nService
-) {}
-
-// Cambiar tema
-this.themeService.toggle();
-
-// Traducir texto
-this.i18n.t('hero_greeting'); // "Hola, soy"
-```
-
-### Variables CSS Disponibles
-
-```css
-:root {
-  --bg-primary;      /* Fondo principal */
-  --bg-secondary;    /* Fondo secundario */
-  --bg-card;        /* Fondo de tarjetas */
-  --text-primary;   /* Texto principal */
-  --text-secondary; /* Texto secundario */
-  --accent;        /* Color de acento */
-  --accent2;       /* Segundo color de acento */
-  --navbar-bg;      /* Fondo del navbar */
-  --shadow;         /* Sombras */
-}
+│   │   ├── i18n/           # Diccionarios de traducción ES/EN
+│   │   ├── services/       # Lógica central (I18n, Theme, Analytics)
+│   │   └── pipes/          # Pipes de seguridad y utilidades
+│   ├── features/           # Módulos de funcionalidad (Hero, Projects, Experience)
+│   └── shared/             # Componentes reutilizables (Navbar, ProtectedInfo)
+├── assets/                 # Recursos estáticos (Imágenes, PDF)
+└── styles.css              # Diseño base con Tailwind v4 @theme
 ```
 
 ---
 
-## 🇬🇧 English
+## 🚀 Instalación y Uso
 
-### Features
+### Requisitos
+- Node.js 18+
+- Angular CLI 19+
 
-- **🎨 Dark/Light Mode**: Smooth transitions with CSS variables and localStorage persistence
-- **🌍 Internationalization ES/EN**: Complete translations for all texts
-- **📧 Protected Email**: Canvas rendering + anti-scraping honeypot
-- **🖥️ Mini Browsers**: Embedded iframes for real project previews
-- **♿ Accessibility**: Full screen reader and keyboard navigation support
+### Pasos
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/joseRiver39/curriculo.git
+   cd curriculo
+   ```
 
-### Project Structure
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   ```
 
-```
-src/
-├── app/
-│   ├── core/
-│   │   ├── i18n/           # ES/EN translations
-│   │   ├── pipes/         # Custom pipes
-│   │   └── services/      # ThemeService, I18nService
-│   ├── features/
-│   │   └── projects/      # ProjectBrowserComponent
-│   └── shared/
-│       └── email-protected/  # EmailProtectedComponent
-└── styles.css           # Global CSS Variables
-```
+3. **Ejecutar en desarrollo**
+   ```bash
+   ng serve -o
+   ```
 
-### Installation
-
-```bash
-# Clone repository
-git clone https://github.com/your-user/portfolio-angular.git
-cd portfolio-angular
-
-# Install dependencies
-npm install
-
-# Start dev server
-ng serve
-
-# Build for production
-ng build
-```
-
-### Services Usage
-
-```typescript
-// Inject in your component
-constructor(
-  private themeService: ThemeService,
-  private i18n: I18nService
-) {}
-
-// Toggle theme
-this.themeService.toggle();
-
-// Translate text
-this.i18n.t('hero_greeting'); // "Hi, I'm"
-```
-
-### Available CSS Variables
-
-```css
-:root {
-  --bg-primary;      /* Main background */
-  --bg-secondary;  /* Secondary background */
-  --bg-card;        /* Card background */
-  --text-primary;  /* Main text */
-  --text-secondary;/* Secondary text */
-  --accent;        /* Primary accent */
-  --accent2;       /* Secondary accent */
-  --navbar-bg;     /* Navbar background */
-  --shadow;        /* Shadows */
-}
-```
+4. **Compilar para producción**
+   ```bash
+   ng build --configuration production
+   ```
 
 ---
 
-## 📄 Licencia / License
+## 🔧 Integraciones
 
-MIT License - see [LICENSE](LICENSE) for details.
-
----
-
-## 🤝 Contribuir / Contributing
-
-1. Fork el proyecto
-2. Crea tu rama (`git checkout -b feature/nueva-caracteristica`)
-3. Commit tus cambios (`git commit -m 'Agrega nueva característica'`)
-4. Push a la rama (`git push origin feature/nueva-caracteristica`)
-5. Abre un Pull Request
+- **Formspree**: Gestión de mensajes de contacto sin backend propio.
+- **Google Fonts**: Tipografías 'Syne' y 'DM Sans' para un look tipográfico moderno.
+- **Canvas API**: Renderizado de seguridad para datos sensibles.
 
 ---
 
-## 📧 Contacto / Contact
+## 🤝 Contacto
 
-- **Email**: [joseantonioriveraurbi16@gmail.com](mailto:joseantonioriveraurbi16@gmail.com)
-- **WhatsApp**: [+57 313 3945995](https://wa.me/573133945995)
+Si estás interesado en mi perfil o tienes alguna duda sobre este proyecto:
+
+- **LinkedIn**: [Enlace a tu perfil]
+- **Email**: joseantonioriveraurbi16@gmail.com (Protegido en la web)
 - **GitHub**: [@joseRiver39](https://github.com/joseRiver39)
 
 ---
 
-⭐️ Si te gusta este proyecto, dale una estrella / If you like this project, give it a star
+> [!TIP]
+> Este portafolio está listo para ser desplegado en **Vercel** o **Netlify** con un solo clic.
+
+---
+
+Desarrollado con ❤️ por **José Rivera**
