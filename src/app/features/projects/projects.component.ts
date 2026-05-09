@@ -121,7 +121,7 @@ export class ProjectsComponent implements AfterViewInit {
     {
       id: 4,
       title: 'Landing Template',
-      url: 'https://landing-page-plantilla.vercel.app/',
+      url: 'https://landing-page-platilla.vercel.app/',
       descriptionKey: 'proj4_desc',
       stack: ['Next.js', 'React', 'Premium UI'],
       category: 'Design System',
