@@ -126,6 +126,15 @@ export class ProjectsComponent implements AfterViewInit {
       stack: ['Next.js', 'React', 'Premium UI'],
       category: 'Design System',
       accentColor: '#fb923c'
+    },
+    {
+      id: 5,
+      title: 'SAMP - Hackathones UNAD',
+      url: 'https://samp.gruslin.tech/',
+      descriptionKey: 'proj5_desc',
+      stack: ['Web Platform', 'AI Integration', 'Education'],
+      category: 'Education & AI',
+      accentColor: '#0ea5e9'
     }
   ];
 

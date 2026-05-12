@@ -50,6 +50,7 @@ export const TRANSLATIONS = {
     proj2_desc: 'Plataforma sobre valorización del tamo de arroz con calculadora científica y API TRM del gobierno colombiano.',
     proj3_desc: 'Guía interactiva sobre uso responsable de tecnología para familias. UI premium con modo oscuro y animaciones fluidas.',
     proj4_desc: 'Template de landing page moderna y reutilizable con estándares premium de UI/UX, fully responsive y lista para producción.',
+    proj5_desc: 'SAMP (Sistema Académico de Maratones de Programación). Plataforma para la gestión de hackathones en la UNAD. Integra competencias, evaluación formativa y soporte de IA para guiar el aprendizaje.',
 
     /* EXPERIENCIA */
     exp_title: 'Experiencia laboral',
@@ -143,6 +144,7 @@ export const TRANSLATIONS = {
     proj2_desc: 'Platform about rice straw valorization with scientific calculator and Colombian government TRM API integration.',
     proj3_desc: 'Interactive guide on responsible technology use for families. Premium UI with dark mode and smooth animations.',
     proj4_desc: 'Modern and reusable landing page template with premium UI/UX standards, fully responsive and production-ready.',
+    proj5_desc: 'SAMP (Academic Programming Marathons System). Platform for managing hackathons at UNAD. It integrates competitions, formative assessment, and AI support to guide student learning.',
 
     /* EXPERIENCE */
     exp_title: 'Work experience',
