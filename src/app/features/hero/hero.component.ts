@@ -43,7 +43,7 @@ interface Particle {
             <lucide-icon [name]="ExternalLink" class="w-4 h-4"></lucide-icon>
             {{ i18n.t('hero_cta_projects') }}
           </a>
-          <a href="/assets/cv.pdf" class="btn-outline">
+          <a [href]="i18n.t('hero_cv_path')" class="btn-outline">
             <lucide-icon [name]="Download" class="w-4 h-4"></lucide-icon>
             {{ i18n.t('hero_cta_cv') }}
           </a>

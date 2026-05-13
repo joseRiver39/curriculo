@@ -18,6 +18,7 @@ export const TRANSLATIONS = {
     hero_sub: 'Construyo APIs robustas, interfaces modernas e integro inteligencia artificial en sistemas backend.',
     hero_cta_projects: 'Ver proyectos',
     hero_cta_cv: 'Descargar CV',
+    hero_cv_path: '/assets/cv.pdf',
     hero_available: '✦ Disponible para proyectos remotos',
 
     /* SOBRE MÍ */
@@ -112,6 +113,7 @@ export const TRANSLATIONS = {
     hero_sub: 'I build robust APIs, modern interfaces and integrate artificial intelligence into backend systems.',
     hero_cta_projects: 'View projects',
     hero_cta_cv: 'Download CV',
+    hero_cv_path: '/assets/cv_en.pdf',
     hero_available: '✦ Available for remote projects',
 
     /* ABOUT */
