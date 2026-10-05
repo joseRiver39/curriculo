@@ -52,6 +52,7 @@ export const TRANSLATIONS = {
     proj3_desc: 'Guía interactiva sobre uso responsable de tecnología para familias. UI premium con modo oscuro y animaciones fluidas.',
     proj4_desc: 'Template de landing page moderna y reutilizable con estándares premium de UI/UX, fully responsive y lista para producción.',
     proj5_desc: 'SAMP (Sistema Académico de Maratones de Programación). Plataforma para la gestión de hackathones en la UNAD. Integra competencias, evaluación formativa y soporte de IA para guiar el aprendizaje.',
+    proj6_desc: 'Plataforma Social con Propósito (PSP). Solución web integral para conectar empresas público-privadas, comercio local, agroindustria y sociedad civil en Urabá y Colombia. Desarrollada en Frontend y Backend.',
 
     /* EXPERIENCIA */
     exp_title: 'Experiencia laboral',
@@ -147,6 +148,7 @@ export const TRANSLATIONS = {
     proj3_desc: 'Interactive guide on responsible technology use for families. Premium UI with dark mode and smooth animations.',
     proj4_desc: 'Modern and reusable landing page template with premium UI/UX standards, fully responsive and production-ready.',
     proj5_desc: 'SAMP (Academic Programming Marathons System). Platform for managing hackathons at UNAD. It integrates competitions, formative assessment, and AI support to guide student learning.',
+    proj6_desc: 'Social Purpose Platform (PSP). Comprehensive web solution connecting public-private companies, local trade, agro-industry, and civil society in Urabá and Colombia. Developed across Frontend and Backend.',
 
     /* EXPERIENCE */
     exp_title: 'Work experience',

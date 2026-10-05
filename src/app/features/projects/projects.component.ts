@@ -135,6 +135,15 @@ export class ProjectsComponent implements AfterViewInit {
       stack: ['Web Platform', 'AI Integration', 'Education'],
       category: 'Education & AI',
       accentColor: '#0ea5e9'
+    },
+    {
+      id: 6,
+      title: 'Plataforma PSP',
+      url: 'https://www.plataforma-psp.org',
+      descriptionKey: 'proj6_desc',
+      stack: ['Frontend & Backend', 'Full Stack', 'TailwindCSS'],
+      category: 'Social Impact · Full Stack',
+      accentColor: '#10b981'
     }
   ];
 
